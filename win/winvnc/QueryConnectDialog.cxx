@@ -86,7 +86,7 @@ void QueryConnectDialog::setCountdownLabel() {
   setItemString(IDC_QUERY_COUNTDOWN, buf);
 }
 
-BOOL QueryConnectDialog::dialogProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
+INT_PTR QueryConnectDialog::dialogProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
   if (msg == WM_TIMER) {
     if (--countdown == 0 || desktopChangeRequired()) {
       DestroyWindow(hwnd);

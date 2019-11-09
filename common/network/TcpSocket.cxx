@@ -20,7 +20,7 @@
 //#include <io.h>
 #include <winsock2.h>
 #define errorNumber WSAGetLastError()
-#define snprintf _snprintf
+//#define snprintf _snprintf
 #else
 #define errorNumber errno
 #define closesocket close

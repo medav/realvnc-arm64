@@ -67,12 +67,12 @@ struct internal_state;
 
 typedef struct z_stream_s {
     Bytef    *next_in;  /* next input byte */
-    uInt     avail_in;  /* number of bytes available at next_in */
-    uLong    total_in;  /* total nb of input bytes read so far */
+    uLongLong     avail_in;  /* number of bytes available at next_in */
+	uLongLong    total_in;  /* total nb of input bytes read so far */
 
     Bytef    *next_out; /* next output byte should be put there */
-    uInt     avail_out; /* remaining free space at next_out */
-    uLong    total_out; /* total nb of bytes output so far */
+	uLongLong     avail_out; /* remaining free space at next_out */
+	uLongLong    total_out; /* total nb of bytes output so far */
 
     char     *msg;      /* last error message, NULL if no error */
     struct internal_state FAR *state; /* not visible by applications */

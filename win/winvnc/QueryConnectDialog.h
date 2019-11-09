@@ -42,7 +42,7 @@ namespace winvnc {
 
     // Dialog methods (protected)
     virtual void initDialog();
-    virtual BOOL dialogProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
+    virtual INT_PTR dialogProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
     // Custom internal methods
     void setCountdownLabel();
